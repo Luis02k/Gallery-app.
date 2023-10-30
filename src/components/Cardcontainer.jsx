@@ -4,13 +4,15 @@ import { Card, Modal } from "@nextui-org/react";
 
 export const Cardcontainer = ({ img }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const cambiarEstadoAAbierto = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <Card style={{ margin: "10px", overflow: "hidden" }}>
         <img
           onClick={() => {
-            setIsOpen(true);
+            cambiarEstadoAAbierto();
           }}
           class="rounded mx-auto d-block"
           src={img}
